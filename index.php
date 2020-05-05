@@ -15,10 +15,12 @@ include 'user.inc.php';
 </head>
 <body>
         <?php
-            $user1 = new User();
-            $user1->setName('<h4>Stephan</h4>');
+            $user1 = new User("Stephan", "Petersen", 1, "fellowjiister", "xxxxxxx");
+            echo "<h4>";
+            echo $user1->name;
+            echo "</h4><h4>";
             echo $user1->username;
-
+            echo "</h4>";
         ?>
 <h1>Hier Daten Eingeben</h1>
             <form class="input" action="input.php" method="POST">
