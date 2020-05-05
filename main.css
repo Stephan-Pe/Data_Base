@@ -24,3 +24,6 @@ button {
     width: 100px;
     letter-spacing: 2px;
 }
+#display {
+    font-size: 12px;
+}
