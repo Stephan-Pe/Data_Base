@@ -15,21 +15,21 @@
         
     require 'dbconn.php';
 
-    $vorname = $_POST['vorname'];
-    $surname = $_POST['surname'];
+    $name = $_POST['name'];
+    $lastname = $_POST['lastname'];
     $company = $_POST['company'];
     $adress = $_POST['adress'];
     $plz = $_POST['plz'];
     $city = $_POST['city'];
     $phone = $_POST['phone'];
-    $mobil = $_POST['mobil'];
+    $mobile = $_POST['mobile'];
     $email = $_POST['email'];
     
     if (!$conn) {
         die("Connection failed: " .mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO mitglieder (vorname, surname, company, adress, plz, city, phone, mobil, email) VALUES ('$vorname', '$surname', '$company', '$adress', '$plz', '$city', '$phone', '$mobil', '$email')";
+    $sql = "INSERT INTO mitglieder (name, lastname, company, adress, plz, city, phone, mobile, email) VALUES ('$name', '$lastname', '$company', '$adress', '$plz', '$city', '$phone', '$mobile', '$email')";
     if (mysqli_query($conn, $sql)) {
         header("Location: index.php?record=success");
         exit();
