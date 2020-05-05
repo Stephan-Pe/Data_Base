@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'includes/dbconn.php';
+require_once 'dbconn.php';
 include 'includes/autoloader.inc.php';
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,6 @@ include 'includes/autoloader.inc.php';
 </head>
 <body>
         <?php
-            echo User\User::$userAge;
             User\User::setUserAge(21);
             echo User\User::$userAge;
         ?>
